@@ -1,0 +1,63 @@
+body {
+	font-family:  "Verdana", "Arial", sans-serif, "Times New Roman";
+}
+
+header, footer {
+	background-color: #000094;
+	color: white;
+}
+
+header {
+	text-align: center;
+}
+
+#main-nav {
+	text-align: center;
+	border-style:  double;
+	border-width:  medium;
+	font-family: "Arial", sans-serif, "Times New Roman";
+	font-size:  1.2em;
+}
+
+.album-item {
+	text-align: center;
+}
+
+.album-behind-the-scenes {
+	text-align: center;
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+p {
+	font-size:  1em;
+}
+
+ul {
+	display: inline-block;
+}
+
+ol {
+	display: inline-block;
+}
+
+a {
+	font-size: 1em;
+	color: #ff96fd;
+}
+
+a:visited {
+	color: #bf71be;
+}
+
+.album-behind-the-scenes img, .album-item img {
+	width: 500px;
+}
