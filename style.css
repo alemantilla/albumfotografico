@@ -1,36 +1,19 @@
+/* Background styles */
+body {
+	background: url("paper.gif") repeat;
+}
+
+/* Font styles */
 body {
 	font-family:  "Verdana", "Arial", sans-serif, "Times New Roman";
 }
 
-header, footer {
-	background-color: #000094;
-	color: white;
-}
-
-header {
-	text-align: center;
-}
-
-#main-nav {
-	text-align: center;
-	border-style:  double;
-	border-width:  medium;
-	font-family: "Arial", sans-serif, "Times New Roman";
-	font-size:  1.2em;
-}
-
-.album-item {
-	text-align: center;
-}
-
-.album-behind-the-scenes {
-	text-align: center;
-	font-size: 1.5em;
-	font-style: italic;
-}
-
 h1 {
 	font-size: 3em;
+	text-shadow: -3px -3px 10px white;
+	text-transform: capitalize;
+	text-decoration: underline;
+	line-height: 150%;
 }
 
 h2 {
@@ -41,6 +24,34 @@ p {
 	font-size:  1em;
 }
 
+a {
+	font-size: 1em;
+	color: #ff70fd;
+}
+
+a:visited {
+	color: #bf71be;
+}
+
+/* Header and footer styles */
+header, footer {
+	background-color: #000094;
+	color: white;
+}
+
+header {
+	text-align: center;
+}
+
+/* Navigation box for the main page */
+#main-nav {
+	text-align: center;
+	border-style: dashed;
+	font-family: "Arial", sans-serif, "Times New Roman";
+	font-size:  1.2em;
+}
+
+/* Navigation list trickery so it displays properly */
 ul {
 	display: inline-block;
 }
@@ -49,15 +60,86 @@ ol {
 	display: inline-block;
 }
 
-a {
-	font-size: 1em;
-	color: #ff96fd;
+nav li {
+	text-indent: 15px;
 }
 
-a:visited {
-	color: #bf71be;
+/* Styles for album and behind-the-scenes sections */
+.album-item {
+	text-align: center;
+}
+
+.album-behind-the-scenes {
+	text-align: center;
+	font-size: 1.5em;
+	font-style: italic;
 }
 
 .album-behind-the-scenes img, .album-item img {
 	width: 500px;
+}
+
+/* Table styles */
+table {
+	border-collapse: collapse;
+	border-style: dashed;
+	border-width: medium;
+	border-color: black;
+	text-align: center;
+	/* This centers the table */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td, th {
+	padding: 5px;
+	font-weight: bold;
+}
+
+th {
+	text-decoration: underline;
+}
+
+.table-grey {
+	background-color: grey;
+}
+
+/* Table styles (day) */
+.day {
+	background-color: skyblue;
+}
+
+th em {
+	font-style: normal;
+}
+
+.day em, .day a {
+	color: yellow;
+}
+
+.day em {
+	text-shadow: -2px 0px 3px #c2c200;
+}
+
+.day a:visited {
+	color: #dbdb00;
+}
+
+/* Table styles (night) */
+
+.night {
+	background-color: midnightblue;
+	color: white;
+}
+
+.night em, .night a {
+	color: lightgrey;
+}
+
+.night em {
+	text-shadow: -2px 0px 3px grey;
+}
+
+.night a:visited {
+	color: grey;
 }
