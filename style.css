@@ -1,6 +1,7 @@
 /* Background styles */
 body {
 	background: url("paper.gif") repeat;
+	margin: 0;
 }
 
 /* Font styles */
@@ -49,19 +50,61 @@ header {
 	border-style: dashed;
 	font-family: "Arial", sans-serif, "Times New Roman";
 	font-size:  1.2em;
+	text-decoration: none;
 }
 
-/* Navigation list trickery so it displays properly */
-ul {
+#main-nav ol {
 	display: inline-block;
+	margin: 0 0 20px 0;
+	padding: 0;
 }
 
-ol {
-	display: inline-block;
-}
-
-nav li {
+#main-nav li {
 	text-indent: 15px;
+}
+
+#week1 a { color: red; }
+#week2 a { color: orange; }
+#week3 a { color: #c2c200; }
+#week4 a { color: green; }
+#week5 a { color: darkcyan; }
+#week6 a { color: blue; }
+#week7 a { color: purple; }
+
+/* Navigation bar styles for the other pages
+TIL that navigation bars are actually pretty complex */
+.nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: blue;
+}
+
+.nav li {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.nav a {
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	color: white;
+	border-right: 1px solid white;
+}
+
+.nav a:hover:not(.current-page) {
+	background-color: white;
+	color: black;
+}
+
+.current-page {
+	background-color: #ff70fd;
+	color: black;
 }
 
 /* Styles for album and behind-the-scenes sections */
@@ -75,8 +118,12 @@ nav li {
 	font-style: italic;
 }
 
-.album-behind-the-scenes img, .album-item img {
+.album-behind-the-scenes img:not(.vertical), .album-item img:not(.vertical) {
 	width: 500px;
+}
+
+.vertical {
+	height: 500px;
 }
 
 /* Table styles */
