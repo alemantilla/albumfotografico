@@ -1,33 +1,55 @@
-/* Background styles */
+/* Things I changed:
+- Layout of main page
+- Text sizes (rip em, but font-size: 0 forced me to)
+- Made the header actually be at the top, and stay at the top while scrolling
+- cat */
+
+/* Background and article styles */
 body {
 	background: url("paper.gif") repeat;
 	margin: 0;
+	font-family:  "Verdana", "Arial", sans-serif, "Times New Roman";
+	/* Need this because CSS is weird and it won't render block spacing properly otherwise */
+	font-size: 0px;
+}
+
+article {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 124px;
+}
+
+article+#header-no-nav {
+	margin-top: 80px;
 }
 
 /* Font styles */
-body {
-	font-family:  "Verdana", "Arial", sans-serif, "Times New Roman";
-}
 
 h1 {
-	font-size: 3em;
+	font-size: 48px;
 	text-shadow: -3px -3px 10px white;
 	text-transform: capitalize;
 	text-decoration: underline;
 	line-height: 150%;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 32px;
 }
 
 p {
-	font-size:  1em;
+	font-size:  16px;
 }
 
 a {
-	font-size: 1em;
+	font-size: 16px;
 	color: #ff70fd;
+}
+
+li {
+	font-size: 16px;
 }
 
 a:visited {
@@ -42,15 +64,96 @@ header, footer {
 
 header {
 	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 124px;
 }
 
-/* Navigation box for the main page */
+#header-no-nav {
+	height: 80px;
+}
+
+footer {
+	margin-top: 20px;
+	position: relative;
+	height: 80px;
+}
+
+#peek {
+	width: 150px;
+	position: absolute;
+	bottom: 0;
+	left: 750px;
+}
+
+/* Homepage styles and layout */
+#alejandro {
+	width: 300px;
+}
+
+#homepage {
+	overflow: auto;
+}
+
+#homepage aside, #homepage-main {
+	display: inline-block;
+	width: 50%;
+}
+
+#homepage aside {
+	text-align: center;
+}
+
+/* Navigation bar styles
+TIL that navigation bars are actually pretty complex */
+#top-nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	text-align: left;
+	background-color: blue;
+}
+
+#top-nav li {
+	display: inline-block;
+}
+
+.right {
+	float: right;
+}
+
+#top-nav a {
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	border-right: 1px solid white;
+	color: white;
+}
+
+#top-nav a:visited {
+	color: white;
+}
+
+#top-nav a:hover:not(#current-page) {
+	background-color: white;
+	color: black;
+}
+
+#current-page {
+	background-color: #ff70fd;
+	color: black;
+}
+
+/* Navigation box for the homepage */
 #main-nav {
 	text-align: center;
 	border-style: dashed;
 	font-family: "Arial", sans-serif, "Times New Roman";
-	font-size:  1.2em;
+	font-size: 20px;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 #main-nav ol {
@@ -71,42 +174,6 @@ header {
 #week6 a { color: blue; }
 #week7 a { color: purple; }
 
-/* Navigation bar styles for the other pages
-TIL that navigation bars are actually pretty complex */
-.nav ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-	background-color: blue;
-}
-
-.nav li {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
-.nav a {
-	display: block;
-	padding: 1em;
-	text-decoration: none;
-	color: white;
-	border-right: 1px solid white;
-}
-
-.nav a:hover:not(.current-page) {
-	background-color: white;
-	color: black;
-}
-
-.current-page {
-	background-color: #ff70fd;
-	color: black;
-}
-
 /* Styles for album and behind-the-scenes sections */
 .album-item {
 	text-align: center;
@@ -114,7 +181,6 @@ TIL that navigation bars are actually pretty complex */
 
 .album-behind-the-scenes {
 	text-align: center;
-	font-size: 1.5em;
 	font-style: italic;
 }
 
@@ -133,7 +199,6 @@ table {
 	border-width: medium;
 	border-color: black;
 	text-align: center;
-	/* This centers the table */
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -141,6 +206,7 @@ table {
 td, th {
 	padding: 5px;
 	font-weight: bold;
+	font-size: 16px;
 }
 
 th {
