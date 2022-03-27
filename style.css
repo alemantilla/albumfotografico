@@ -1,8 +1,7 @@
 /* Things I changed:
-- Layout of main page
-- Text sizes (rip em, but font-size: 0 forced me to)
-- Made the header actually be at the top, and stay at the top while scrolling
-- cat */
+- Added Bootstrap
+- Added a new navigation bar using a template (https://startbootstrap.com/template/bare)
+- Changed the footer styles a bit to match with the updated CSS + the color scheme */
 
 /* Background and article styles */
 body {
@@ -15,24 +14,17 @@ body {
 
 article {
 	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 124px;
-}
-
-article+#header-no-nav {
-	margin-top: 80px;
-}
+	padding-right: 10px;}
 
 /* Font styles */
-
-h1 {
-	font-size: 48px;
+h1.navbar-brand {
+	color: white;
+	font-size: 36px;
+	font-weight: bold;
 	text-shadow: -3px -3px 10px white;
 	text-transform: capitalize;
 	text-decoration: underline;
 	line-height: 150%;
-	margin-block-start: 0;
-	margin-block-end: 0;
 }
 
 h2 {
@@ -56,44 +48,31 @@ a:visited {
 	color: #bf71be;
 }
 
-/* Header and footer styles */
-header, footer {
-	background-color: #000094;
-	color: white;
-}
-
-header {
-	text-align: center;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 124px;
-}
-
-#header-no-nav {
-	height: 80px;
-}
+/* Footer styles */
 
 footer {
-	margin-top: 20px;
+	/* need this to position the cat image */
 	position: relative;
-	height: 80px;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+footer p {
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 #peek {
 	width: 150px;
 	position: absolute;
 	bottom: 0;
-	left: 750px;
+	right: 0;
 }
 
 /* Homepage styles and layout */
 #alejandro {
 	width: 300px;
-}
-
-#homepage {
-	overflow: auto;
 }
 
 #homepage aside, #homepage-main {
@@ -103,47 +82,6 @@ footer {
 
 #homepage aside {
 	text-align: center;
-}
-
-/* Navigation bar styles
-TIL that navigation bars are actually pretty complex */
-#top-nav ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-	text-align: left;
-	background-color: blue;
-}
-
-#top-nav li {
-	display: inline-block;
-}
-
-.right {
-	float: right;
-}
-
-#top-nav a {
-	display: block;
-	padding: 1em;
-	text-decoration: none;
-	border-right: 1px solid white;
-	color: white;
-}
-
-#top-nav a:visited {
-	color: white;
-}
-
-#top-nav a:hover:not(#current-page) {
-	background-color: white;
-	color: black;
-}
-
-#current-page {
-	background-color: #ff70fd;
-	color: black;
 }
 
 /* Navigation box for the homepage */
